@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package App;
 
-/**
- *
- * @author Usuario
- */
+import java.util.ArrayList;
+
 public class Carrito {
+    private ArrayList<Producto> productos = new ArrayList<>();
     
-}
+    public void agregarProducto (Producto p){
+        productos.add(p);
+    }
+   
+    }
+    
+
