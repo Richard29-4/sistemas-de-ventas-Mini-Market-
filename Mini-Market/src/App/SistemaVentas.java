@@ -56,12 +56,12 @@ public class SistemaVentas {
 
                 case 4:
                     double total = carrito.calcularTotal();
-                    System.out.println("💰 Total a pagar: S/." + total);
+                    System.out.println(" Total a pagar: S/." + total);
                     System.out.println("Gracias por su compra. 🛒");
                     break;
 
                 case 5:
-                    System.out.println("👋 Saliendo del sistema...");
+                    System.out.println(" Saliendo del sistema...");
                     break;
 
                 default:
@@ -73,4 +73,5 @@ public class SistemaVentas {
         sc.close();
     }
 }
+
 
