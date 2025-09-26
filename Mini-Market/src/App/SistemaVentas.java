@@ -18,7 +18,7 @@ public class SistemaVentas {
         int opcion;
 
         do {
-            System.out.println("\n--- Sistema de Ventas ---");
+            System.out.println("\n Sistema de Ventas ");
             System.out.println("1. Mostrar productos");
             System.out.println("2. Agregar producto al carrito");
             System.out.println("3. Ver carrito");
@@ -30,7 +30,7 @@ public class SistemaVentas {
     
             switch (opcion) {
                 case 1:
-                    System.out.println("\n--- Lista de Productos ---");
+                    System.out.println("\n Lista de Productos ");
                     for (int i = 0; i < productos.size(); i++) {
                         System.out.println((i + 1) + ". " + productos.get(i));
                     }
@@ -45,7 +45,7 @@ public class SistemaVentas {
                     if (numProd >= 0 && numProd < productos.size()) {
                         carrito.agregarProducto(productos.get(numProd), cantidad);
                     } else {
-                        System.out.println("⚠ Producto inválido.");
+                        System.out.println(" Producto inválido.");
                     }
                     break;
                     
@@ -57,7 +57,7 @@ public class SistemaVentas {
                 case 4:
                     double total = carrito.calcularTotal();
                     System.out.println(" Total a pagar: S/." + total);
-                    System.out.println("Gracias por su compra. 🛒");
+                    System.out.println("Gracias por su compra. ");
                     break;
 
                 case 5:
@@ -65,7 +65,7 @@ public class SistemaVentas {
                     break;
 
                 default:
-                    System.out.println("⚠ Opción inválida.");
+                    System.out.println(" Opción inválida.");
             }
 
         } while (opcion != 5);
@@ -73,5 +73,6 @@ public class SistemaVentas {
         sc.close();
     }
 }
+
 
 
