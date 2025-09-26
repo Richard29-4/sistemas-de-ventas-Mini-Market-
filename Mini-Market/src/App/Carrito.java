@@ -26,7 +26,7 @@ public class Carrito {
         if (productos.isEmpty()) {
             System.out.println("El carrito está vacío.");
         } else {
-            System.out.println("\n--- Productos en el Carrito ---");
+            System.out.println("\n Productos en el Carrito ");
             for (Producto p: productos) {
                 System.out.println(p.getNombre() + " - S/." + p.getPrecio());
             }
@@ -41,3 +41,4 @@ public double calcularTotal() {
         return total;
     }
 }
+
