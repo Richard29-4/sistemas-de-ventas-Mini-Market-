@@ -61,7 +61,7 @@ public class SistemaVentas {
                     break;
 
                 case 5:
-                    System.out.println(" Saliendo del sistema...");
+                    System.out.println(" Saliendo del sistema.....");
                     break;
 
                 default:
@@ -73,6 +73,7 @@ public class SistemaVentas {
         sc.close();
     }
 }
+
 
 
 
