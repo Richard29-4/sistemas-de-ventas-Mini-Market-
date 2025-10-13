@@ -10,7 +10,7 @@ public class SistemaVentas {
 
         
         double precioConDescuento = producto3.aplicarDescuento(10);
-        System.out.println("💰 Precio con descuento del Teclado: S/ " + precioConDescuento);
+        System.out.println(" Precio con descuento del Teclado: S/ " + precioConDescuento);
 
         
         Carrito carrito = new Carrito();
@@ -32,6 +32,7 @@ public class SistemaVentas {
         pago.procesarPago();
     }
 }
+
 
 
 
