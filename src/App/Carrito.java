@@ -15,7 +15,7 @@ public class Carrito {
     }
 
     public void mostrarCarrito() {
-        System.out.println("\nro Productos en el carrito:");
+        System.out.println("\nro Productos agregados en el carrito:");
         for (Producto p : productos) {
             System.out.println("- " + p);
         }
@@ -33,4 +33,5 @@ public class Carrito {
         return productos;
     }
 }
+
 
