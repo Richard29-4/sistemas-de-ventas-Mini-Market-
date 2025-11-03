@@ -10,8 +10,9 @@ public class Pago {
     }
 
     public void procesarPago() {
-        System.out.println("\nro Pago realizado con " + metodo + " por el  monto de S/ " + monto);
+        System.out.println("\numero de Pago realizado con " + metodo + " por el  monto de S/ " + monto);
         
     }
 }
+
 
