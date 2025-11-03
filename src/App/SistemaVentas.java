@@ -20,7 +20,7 @@ public class SistemaVentas {
 
         
         Cliente cliente = new Cliente("Richard Alejo", "78945612", "Lima");
-        Vendedor vendedor = new Vendedor("María Torres", "V001");
+        Vendedor vendedor = new Vendedor("Margaret Carrasco", "V001");
 
         
         carrito.mostrarCarrito();
@@ -33,6 +33,7 @@ public class SistemaVentas {
         pago.procesarPago();
     }
 }
+
 
 
 
