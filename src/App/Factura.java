@@ -7,18 +7,19 @@ public class Factura {
     private double total;
 
     public Factura(int numeroFactura, Cliente cliente, Vendedor vendedor, double total) {
-        this.numeroFactura = numeroFactura;
+        this.numerodeFactura = numerodeFactura;
         this.cliente = cliente;
         this.vendedor = vendedor;
         this.total = total;
     }
 
     public void mostrarFactura() {
-        System.out.println("\numero FACTURA #:" + numeroFactura);
+        System.out.println("\numero de FACTURA #:" + numerodeFactura);
         cliente.mostrarInformacion();
         vendedor.mostrarInformacion();
         System.out.println("Total a pagar: S/ " + total);
     }
 }
+
 
 
