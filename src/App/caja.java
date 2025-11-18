@@ -17,5 +17,7 @@ public class Caja <T> {
         this.contenido = contenido;
     }
 }
+// este es mi clase generica para no olvidarme
+
 
 
