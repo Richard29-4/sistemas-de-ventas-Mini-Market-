@@ -1,37 +1,56 @@
-
 package sistemaventas;
 
+import java.util.ArrayList;
+import java.util.function.Predicate;
+
 public class SistemaVentas {
-    public static void main(String[] args) {
-        // Productos
-        Producto producto1 = new Producto("Laptop", 3500.00);
-        Producto producto2 = new Producto("Mouse", 80.00);
-        Producto producto3 = new Producto("Teclado", 150.00);
 
-        // Aplica descuento al producto 3 (ejemplo de interfaz)
-        double precioConDescuento = producto3.aplicarDescuento(10);
-        System.out.println("💰 Precio con descuento del Teclado: S/ " + precioConDescuento);
+    private static SistemaVentas instancia;
 
-        // Carrito
-        Carrito carrito = new Carrito();
-        carrito.agregarProducto(producto1);
-        carrito.agregarProducto(producto2);
-        carrito.agregarProducto(producto3);
+    private ArrayList<Producto> productosDisponibles;
 
-        // Cliente y vendedor (herencia y polimorfismo)
-        Cliente cliente = new Cliente("Richard Alejo", "78945612", "Lima");
-        Vendedor vendedor = new Vendedor("María Torres", "V001");
+    // Constructor privado (Singleton)
+    private SistemaVentas() {
+        productosDisponibles = new ArrayList<>();
+        cargarProductos();
+    }
 
-        
-        carrito.mostrarCarrito();
+    // Obtener única instancia
+    public static SistemaVentas getInstancia() {
+        if (instancia == null) {
+            instancia = new SistemaVentas();
+        }
+        return instancia;
+    }
 
-        // Factura y pago
-        Factura factura = new Factura(1001, cliente, vendedor, carrito.calcularTotal());
-        factura.mostrarFactura();
+    // Cargar productos iniciales al sistema
+    private void cargarProductos() {
+        productosDisponibles.add(new Producto("Laptop", 3500.00));
+        productosDisponibles.add(new Producto("Mouse", 80.00));
+        productosDisponibles.add(new Producto("Teclado", 150.00));
+    }
 
-        Pago pago = new Pago("Tarjeta", carrito.calcularTotal());
-        pago.procesarPago();
+    // ========== MÉTODOS CON LAMBDA ==========
+
+    public void listarConLambda() {
+        productosDisponibles.forEach(p -> System.out.println(p));
+    }
+
+    public void filtrarProductos(Predicate<Producto> condicion) {
+        productosDisponibles.stream()
+            .filter(condicion)
+            .forEach(System.out::println);
+    }
+
+    public void ordenarPorNombre() {
+        productosDisponibles.sort(
+            (a, b) -> a.getNombre().compareTo(b.getNombre())
+        );
+    }
+
+    // Para obtener los productos (por si los necesitas)
+    public ArrayList<Producto> getProductos() {
+        return productosDisponibles;
     }
 }
-
 
