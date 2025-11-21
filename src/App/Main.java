@@ -13,7 +13,7 @@ public class Main {
         carrito.agregarProducto(new Producto("Mouse", 80));
         carrito.mostrarCarrito();
 
-        Cliente cliente = new Cliente("Richard Alejo", "78945612", "Lima");
+        Cliente cliente = new Cliente("Richard Alejo", "78945612", "Arequipa");
         Vendedor vendedor = new Vendedor("María Torres", "V001");
 
         Factura factura = new Factura(1001, cliente, vendedor, carrito.calcularTotal());
@@ -23,5 +23,6 @@ public class Main {
         pago.procesarPago();
     }
 }
+
 
 
