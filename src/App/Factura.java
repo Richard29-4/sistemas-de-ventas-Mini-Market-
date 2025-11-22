@@ -14,7 +14,7 @@ public class Factura {
     }
 
     public void mostrarFactura() {
-        System.out.println("\Numero FACTURA #" + numeroFactura);
+        System.out.println("\nro FACTURA #" + numeroFactura);
         cliente.mostrarInformacion();
         vendedor.mostrarInformacion();
         System.out.println("Total a pagar: S/ " + total);
