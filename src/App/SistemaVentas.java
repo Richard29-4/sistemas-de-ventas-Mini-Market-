@@ -9,13 +9,11 @@ public class SistemaVentas {
 
     private ArrayList<Producto> productosDisponibles;
 
-    // Constructor privado (Singleton)
     private SistemaVentas() {
         productosDisponibles = new ArrayList<>();
         cargarProductos();
     }
 
-    // Obtener única instancia
     public static SistemaVentas getInstancia() {
         if (instancia == null) {
             instancia = new SistemaVentas();
@@ -23,14 +21,12 @@ public class SistemaVentas {
         return instancia;
     }
 
-    // Cargar productos iniciales al sistema
     private void cargarProductos() {
         productosDisponibles.add(new Producto("Laptop", 3500.00));
         productosDisponibles.add(new Producto("Mouse", 80.00));
         productosDisponibles.add(new Producto("Teclado", 150.00));
     }
 
-    // ========== MÉTODOS CON LAMBDA ==========
 
     public void listarConLambda() {
         productosDisponibles.forEach(p -> System.out.println(p));
@@ -48,9 +44,9 @@ public class SistemaVentas {
         );
     }
 
-    // Para obtener los productos (por si los necesitas)
     public ArrayList<Producto> getProductos() {
         return productosDisponibles;
     }
 }
+
 
